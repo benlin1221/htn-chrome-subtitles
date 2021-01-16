@@ -1,0 +1,27 @@
+{
+    "name": "uhhhhh",
+    "version": "1.0",
+    "description": "oop idk", 
+    "permissions": ["tabs","activeTab","declarativeContent", "storage", "tabCapture"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html", // need to make small ui... probably just box, text + button
+        // we could make like an on/off button on popup
+        // smart but we have to switch to browser action instead of page action i think which should
+        // be fine except google removed the documentation on that lol
+        // bruh
+        "default_icon": {
+            "icon" : "icon.png" // icon that appears next to address bar
+        }
+    },
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": [""],
+      "js": [""]
+    }],
+    "manifest_version": 2
+}
